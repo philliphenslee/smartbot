@@ -7,5 +7,8 @@ config.token = 'xoxb-11213798960-tLVLDwm9gQVoObQv9FLNoe1C';
 config.plugins = {
     famousquotes: {},
     "smartbot-plugin-stockquote": {},
-    "smartbot-plugin-greet": {}
+    "smartbot-plugin-greet": {},
+    gdriveurl: {
+        apitoken: 'AIzaSyBJ_N4kmA_C0vAl8wZCJyJ_eG-UdFJS6wU'
+    }
 }
