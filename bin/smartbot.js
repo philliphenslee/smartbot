@@ -2,9 +2,20 @@
 var path = require('path');
 var SmartBot = require('../lib/');
 
-var path = path.resolve(process.cwd(), 'config.js');
-var config = require(path);
 
+try {
+    var configPath = path.resolve(process.cwd(), 'config.js');
+    var config = require(configPath);
+
+} catch (e) {
+    console.log(e);
+}
+
+if (!config) {
+    config = {};
+    config.token = process.env.SLACK_API_TOKEN;
+
+}
 var smartBot = new SmartBot(config);
 
 smartBot.run();
