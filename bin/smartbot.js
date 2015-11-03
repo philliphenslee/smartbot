@@ -13,7 +13,9 @@ try {
 if (!config) {
     config = {};
     config.token = process.env.SLACK_API_TOKEN;
-
+    config.plugins= {
+        greet: {}
+    };
 }
 var smartBot = new SmartBot(config);
 
