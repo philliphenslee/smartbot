@@ -2,7 +2,6 @@
 var path = require('path');
 var SmartBot = require('../lib/');
 
-
 try {
     var configPath = path.resolve(process.cwd(), 'config.js');
     var config = require(configPath);
