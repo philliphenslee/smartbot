@@ -6,9 +6,4 @@ config.token = 'xoxb-11751627585-DYeBN3Zs2yqMrdfmQQWTPUWc';
 
 config.plugins = {
     greet: {},
-    famousquotes: {},
-    "smartbot-plugin-stockquote": {},
-    gdriveurl: {
-        apitoken: 'AIzaSyBJ_N4kmA_C0vAl8wZCJyJ_eG-UdFJS6wU'
-    }
 };
