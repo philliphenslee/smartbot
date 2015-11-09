@@ -4,9 +4,7 @@ var SmartBot = require('../lib/');
 
 try {
     var configPath = path.resolve(process.cwd(), 'config.js');
-    console.log(configPath);
     var config = require(configPath);
-
 } catch (e) {
     console.log(e);
 }
@@ -14,10 +12,16 @@ try {
 if (!config) {
     config = {};
     config.token = process.env.SLACK_API_TOKEN;
-    config.plugins= {
+    config.plugins = {
         greet: {}
     };
 }
+
+// Token environment variable overrides config file
+if (process.env.SLACK_API_TOKEN) {
+    options.token = process.env.SLACK_API_TOKEN;
+}
+
 var smartBot = new SmartBot(config);
 
 smartBot.run();
