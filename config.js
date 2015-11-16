@@ -1,8 +1,7 @@
 var config = module.exports = {};
 
-config.token = 'xoxb-11751627585-DYeBN3Zs2yqMrdfmQQWTPUWc';
-
-//config.token = 'xoxb-11213798960-tLVLDwm9gQVoObQv9FLNoe1C';
+// Bot integration Slack API Token
+config.token = 'xoxo-01234567890-ABCDEFGHIJKLMNOPQRSTUVWX';
 
 config.plugins = {
     "smartbot-stockquote": {},

@@ -23,5 +23,4 @@ if (process.env.SLACK_API_TOKEN) {
 }
 
 var smartBot = new SmartBot(config);
-
 smartBot.run();

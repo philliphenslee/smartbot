@@ -20,4 +20,3 @@ Greet.prototype.help = function help(msg) {
     return 'I will respond with help.';
 };
 module.exports = Greet;
-
