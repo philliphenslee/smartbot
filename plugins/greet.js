@@ -17,6 +17,6 @@ Greet.prototype.respond = function respond(message) {
     }
 };
 Greet.prototype.help = function help(msg) {
-    return 'I will respond with help.';
+    return 'Say hello, and I will say hello back...';
 };
 module.exports = Greet;
