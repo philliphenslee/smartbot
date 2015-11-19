@@ -8,7 +8,7 @@ var StockQuotePlugin = function (options) {
     this.name = 'StockQuotes';
 };
 StockQuotePlugin.prototype.matches = function matches(message) {
-    return (/^-stock/).test(message);
+    return (/^stock/).test(message);
 };
 
 StockQuotePlugin.prototype.respond = function respond(message) {
