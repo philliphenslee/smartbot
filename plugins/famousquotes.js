@@ -14,6 +14,9 @@ FamousQuotes.prototype.matches = function matches(msg) {
 FamousQuotes.prototype.respond = function respond(message) {
     var conString = "pg://ph2@postgres.galaxy.ec2:5432/naomi";
     pg.connect(conString, function (err, client) {
+        if (err) {
+            console.log(err);
+        }
         client.query('SELECT * FROM get_quote();', function (err, result) {
             if (err) {
                 console.log(err);
