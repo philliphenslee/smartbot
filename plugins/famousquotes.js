@@ -9,7 +9,6 @@ var FamousQuotes = function (options) {
 FamousQuotes.prototype.matches = function matches(msg) {
     return pattern.test(msg);
 };
-
 FamousQuotes.prototype.respond = function respond(message) {
     var conString = "pg://ph2@postgres.galaxy.ec2:5432/naomi";
     pg.connect(conString, function (err, client) {
