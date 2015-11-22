@@ -6,9 +6,11 @@ var pattern = /(^quote|wisdom|wise$)/;
 var FamousQuotes = function (options) {
     this.name = 'FamousQuotes';
 };
+
 FamousQuotes.prototype.matches = function matches(msg) {
     return pattern.test(msg);
 };
+
 FamousQuotes.prototype.respond = function respond(message) {
     var conString = "pg://ph2@postgres.galaxy.ec2:5432/naomi";
     pg.connect(conString, function (err, client) {
@@ -22,6 +24,7 @@ FamousQuotes.prototype.respond = function respond(message) {
         });
     });
 };
+
 FamousQuotes.prototype.help = function help(msg) {
     return 'I will respond with a famous quote\n';
 };
