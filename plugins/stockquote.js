@@ -19,10 +19,10 @@ StockQuotePlugin.prototype.respond = function respond(message) {
     if (!message.channel.match(/^D0/)) {
         return;
     }
-    var input = message.text.replace('stock', '').trim();
+    var input = message.text.replace(/^stock/i, '').trim();
 
     if (input !== 'help') {
-        match = pattern.test(input);
+        match = this.pattern.test(input);
     }
 
     if (!match) {
