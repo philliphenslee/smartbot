@@ -28,7 +28,7 @@ FamousQuotes.prototype.respond = function respond(message) {
     });
 };
 
-FamousQuotes.prototype.help = function help(msg) {
-    return 'I will respond with a famous quote\n';
+FamousQuotes.prototype.help = function help(message) {
+    return 'Say the word quote, wisdom or wise, and I will respond with a famous quote\n';
 };
 module.exports = FamousQuotes;

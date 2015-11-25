@@ -2,7 +2,7 @@
 var YQL = require('yql');
 var _ = require('lodash');
 
-var pattern = /^([a-zA-Z]+,?\s*)+$/;
+var pattern = /[a-z]{2,}\s?,?\s?/ig;
 
 var StockQuotePlugin = function (options) {
     this.name = 'StockQuotes';
