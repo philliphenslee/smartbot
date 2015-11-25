@@ -1,7 +1,7 @@
 'use strict';
 var _ = require('lodash');
 
-var pattern = /^(Hello|Hi|Hey|Hola|Aloha)/i;
+var pattern = /^(Hello|Hi|Hey|Hola|Aloha)$/i;
 var greetings = ['Hello', 'Hi', 'Hey', 'Hola', 'Aloha'];
 
 var Greet = function (options) {
