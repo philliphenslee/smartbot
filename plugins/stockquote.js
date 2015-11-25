@@ -9,7 +9,7 @@ var StockQuotePlugin = function (options) {
 StockQuotePlugin.prototype.pattern = /[a-z]\s?,?\s?/gi;
 
 StockQuotePlugin.prototype.matches = function matches(message) {
-    return /^stock/i.test(message);
+    return /^stock\W/i.test(message);
 };
 
 StockQuotePlugin.prototype.respond = function respond(message) {
@@ -19,7 +19,7 @@ StockQuotePlugin.prototype.respond = function respond(message) {
     if (!message.channel.match(/^D0/)) {
         return;
     }
-    var input = message.text.replace(/^stock/i, '').trim();
+    var input = message.text.replace(/^stock\W/i, '').trim();
 
     if (input !== 'help') {
         match = this.pattern.test(input);
