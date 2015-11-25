@@ -87,11 +87,13 @@ StockQuotePlugin.prototype.respond = function respond(message) {
                     });
                 }
                 message.attachments.push(attachment);
+                message.send(message);
+                message.attachments.pop();
             } else {
 
             }
         });
-        message.done(message);
+        //message.done(message);
 
     });
 };
