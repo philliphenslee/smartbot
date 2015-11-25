@@ -2,13 +2,14 @@
 var YQL = require('yql');
 var _ = require('lodash');
 
-var pattern = /[a-z]\s?,?\s?/gi;
-
 var StockQuotePlugin = function (options) {
     this.name = 'StockQuotes';
 };
+
+StockQuotePlugin.prototype.pattern = /[a-z]\s?,?\s?/gi;
+
 StockQuotePlugin.prototype.matches = function matches(message) {
-    return (/^stock/i).test(message);
+    return /^stock/i.test(message);
 };
 
 StockQuotePlugin.prototype.respond = function respond(message) {
