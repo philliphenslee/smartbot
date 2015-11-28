@@ -6,7 +6,7 @@ var StockQuotePlugin = function (options) {
     this.name = 'StockQuotes';
 };
 
-StockQuotePlugin.prototype.pattern = /[a-z]\s?,?\s?/gi;
+StockQuotePlugin.prototype.pattern = /^([a-z]+,?\s?)*[a-z]+\s?$/gi;
 
 StockQuotePlugin.prototype.matches = function matches(message) {
     return /^stock\W/i.test(message);
@@ -22,6 +22,7 @@ StockQuotePlugin.prototype.respond = function respond(message) {
     var input = message.text.replace(/^stock\W/i, '').trim();
 
     if (input !== 'help') {
+        this.pattern.lastIndex = 0;
         match = this.pattern.test(input);
     }
 
@@ -87,13 +88,11 @@ StockQuotePlugin.prototype.respond = function respond(message) {
                     });
                 }
                 message.attachments.push(attachment);
-                message.send(message);
-                message.attachments.pop();
             } else {
 
             }
         });
-        //message.done(message);
+        message.done(message);
 
     });
 };

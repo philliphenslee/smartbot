@@ -1,17 +1,18 @@
 'use strict';
 var pg = require('pg');
 
-var pattern = /(^quote|wisdom|wise$)/;
-
 var FamousQuotes = function (options) {
     this.name = 'FamousQuotes';
 };
 
+FamousQuotes.prototype.pattern = /(^quote|wisdom|wise$)/;
+
 FamousQuotes.prototype.matches = function matches(msg) {
-    return pattern.test(msg);
+    return this.pattern.test(msg);
 };
 
 FamousQuotes.prototype.respond = function respond(message) {
+
     var conString = "pg://ph2@postgres.galaxy.ec2:5432/naomi";
     pg.connect(conString, function (err, client) {
         if (err) {
@@ -26,6 +27,7 @@ FamousQuotes.prototype.respond = function respond(message) {
             client.end();
         });
     });
+    pg.end();
 };
 
 FamousQuotes.prototype.help = function help(message) {
