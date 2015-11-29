@@ -12,10 +12,10 @@ Greet.prototype.matches = function matches(msg) {
     return this.pattern.test(msg);
 };
 Greet.prototype.respond = function respond(message) {
-    if (message.isDirectMessage()) {
+    //if (message.isDirectMessage()) {
         var greeting = _.sample(this.greetings);
         message.done(greeting + ', ' + message.user.profile.first_name);
-    }
+    //}
 };
 Greet.prototype.help = function help(message) {
     return 'Say hello, and I will say hello back...';
