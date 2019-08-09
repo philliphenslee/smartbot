@@ -5,4 +5,5 @@ config.token = 'xoxo-01234567890-ABCDEFGHIJKLMNOPQRSTUVWX';
 
 config.plugins = {
     greet: {},
+    dinopass: {}
 };
