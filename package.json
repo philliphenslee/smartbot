@@ -6,10 +6,10 @@
     "baconjs": "^0.7.82",
     "bole": "^2.0.0",
     "lodash": "^3.10.1",
-    "moment": "^2.10.6",
+    "moment": "^2.24.0",
+    "node-fetch": "^2.6.0",
     "pg": "^4.4.3",
-    "smartslack": "^1.0.1",
-    "yql": "^1.0.2"
+    "smartslack": "^1.2.2"
   },
   "devDependencies": {
     "chai": "^3.4.0",
